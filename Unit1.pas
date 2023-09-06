@@ -21,6 +21,7 @@ type
     DBGrid1: TDBGrid;
     CheckBox1: TCheckBox;
     DBNavigator1: TDBNavigator;
+    procedure CheckBox1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,5 +34,10 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.CheckBox1Click(Sender: TObject);
+begin
+  FDQuery1.Active := CheckBox1.Checked;
+end;
 
 end.

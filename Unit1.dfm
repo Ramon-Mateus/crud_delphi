@@ -34,19 +34,16 @@ object Form1: TForm1
       Align = alLeft
       Caption = 'Ativar'
       TabOrder = 0
-      ExplicitLeft = 11
+      OnClick = CheckBox1Click
     end
     object DBNavigator1: TDBNavigator
       Left = 101
       Top = 1
       Width = 949
       Height = 79
+      DataSource = DataSource1
       Align = alClient
       TabOrder = 1
-      ExplicitLeft = 410
-      ExplicitTop = 27
-      ExplicitWidth = 240
-      ExplicitHeight = 25
     end
   end
   object DBGrid1: TDBGrid
@@ -60,6 +57,7 @@ object Form1: TForm1
     Margins.Right = 10
     Margins.Bottom = 10
     Align = alClient
+    DataSource = DataSource1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -87,6 +85,7 @@ object Form1: TForm1
     Top = 215
   end
   object DataSource1: TDataSource
+    DataSet = FDQuery1
     Left = 60
     Top = 270
   end

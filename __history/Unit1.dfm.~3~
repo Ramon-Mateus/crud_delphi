@@ -1,0 +1,89 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 510
+  ClientWidth = 1051
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1051
+    Height = 81
+    Align = alTop
+    Caption = 'Panel1'
+    TabOrder = 0
+    object CheckBox1: TCheckBox
+      AlignWithMargins = True
+      Left = 16
+      Top = 11
+      Width = 75
+      Height = 59
+      Margins.Left = 15
+      Margins.Top = 10
+      Margins.Right = 10
+      Margins.Bottom = 10
+      Align = alLeft
+      Caption = 'Ativar'
+      TabOrder = 0
+      OnClick = CheckBox1Click
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 101
+      Top = 1
+      Width = 949
+      Height = 79
+      Align = alClient
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    AlignWithMargins = True
+    Left = 10
+    Top = 91
+    Width = 1031
+    Height = 409
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    Align = alClient
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'User_Name=industria'
+      'Password=t3ch1nf0'
+      'Database=MyDB'
+      'Server=DEV1'
+      'DriverID=MSSQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 60
+    Top = 160
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM funcionarios;')
+    Left = 60
+    Top = 215
+  end
+  object DataSource1: TDataSource
+    Left = 60
+    Top = 270
+  end
+end
